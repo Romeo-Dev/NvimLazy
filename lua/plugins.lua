@@ -3,7 +3,7 @@ return {
    config = function()
       require("catppuccin").setup({
       })
-      vim.cmd.colorscheme "catppuccin-frappe"
+      vim.cmd.colorscheme "catppuccin-mocha"
     end
   },
   {"nvim-treesitter/nvim-treesitter", build= ":TSUpdate"},
