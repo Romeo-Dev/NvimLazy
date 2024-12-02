@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "ts_ls","eslint", "cssls", "html", "intelephense", "pylyzer"}
+        ensure_installed = {"lua_ls", "ts_ls","eslint", "cssls", "html", "intelephense", "pylyzer", "vuels", "tailwindcss"}
       })
     end
   },
@@ -24,6 +24,8 @@ return {
       lspconfig.intelephense.setup({})
       lspconfig.pylyzer.setup({})
       lspconfig.ts_ls.setup({})
+      lspconfig.vuels.setup({})
+      lspconfig.tailwindcss.setup({})
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
