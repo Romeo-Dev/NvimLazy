@@ -25,3 +25,4 @@ local opts = {}
 require("lazy").setup("plugins")
 
 vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left<CR>', {})
+vim.keymap.set('n', '<leader>q', ':Neotree filesystem reveal right<CR>', {})

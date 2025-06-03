@@ -7,12 +7,19 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    config = function ()
-      local config = require("nvim-treesitter.configs")
-      config.setup({
-        ensure_installed = {"lua", "html", "json", "javascript", "css", "php", "python", "sql", "typescript"},
-        highlight = { enable = true },
-        indent = { enable = true }
+    config = function()
+      require("neo-tree").setup({
+        window = {
+          position = "right",
+          width = 30,
+        },
+        filesystem = {
+          filtered_items = {
+            visible = true,
+            hide_dotfiles = false,
+            hide_gitignored = false,
+          },
+        },
       })
     end
   }
